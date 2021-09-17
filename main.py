@@ -4,7 +4,7 @@ from werkzeug.utils import redirect, secure_filename
 from MediaPipe.mediapipeMain import handtracked
 from flask import Flask, request, flash,jsonify
 from flask_restful import Api, Resource, reqparse, abort, fields, marshal_with
-from flask_sqlalchemy import SQLAlchemy
+#from flask_sqlalchemy import SQLAlchemy
 from werkzeug.utils import secure_filename
 import cv2
 import mediapipe as mp
@@ -23,8 +23,8 @@ import io
 ## Start Stuffs
 app = Flask(__name__)
 api = Api(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
-db = SQLAlchemy(app)
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+#db = SQLAlchemy(app)
 ## Start Stuffs
 
 def decode_base64(data, altchars=b'+/'):
